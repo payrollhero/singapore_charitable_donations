@@ -1,0 +1,3 @@
+module SingaporeCharitableDonations
+  VERSION = "0.0.1"
+end
