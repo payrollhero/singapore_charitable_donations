@@ -1,5 +1,11 @@
 # SingaporeCharitableDonations
 
+[![Gem Version](https://badge.fury.io/rb/singapore_charitable_donations.svg)](http://badge.fury.io/rb/singapore_charitable_donations)
+[![Code Climate](https://codeclimate.com/github/payrollhero/singapore_charitable_donations/badges/gpa.svg)](https://codeclimate.com/github/payrollhero/singapore_charitable_donations)
+[![Test Coverage](https://codeclimate.com/github/payrollhero/singapore_charitable_donations/badges/coverage.svg)](https://codeclimate.com/github/payrollhero/singapore_charitable_donations)
+
+[![Circle CI](https://circleci.com/gh/payrollhero/singapore_charitable_donations.png?style=badge)](https://circleci.com/gh/payrollhero/singapore_charitable_donations)
+
 This gem is a calculator for charitable donations in Singapore.
 
 ## Installation
