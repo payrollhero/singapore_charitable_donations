@@ -1,6 +1,6 @@
 # SingaporeCharitableDonations
 
-This gem is a calculator for all the charitable donations in Singapore.
+This gem is a calculator for charitable donations in Singapore.
 
 ## Installation
 
@@ -19,19 +19,17 @@ Or install it yourself as:
     $ gem install singapore_charitable_donations
 
 ## Usage
-Charitable donation types:
+
+Currently supported charitable donation types:
   * CDAC - Chinese Development Assistance Council Fund
   * ECF - Eurasian Community Fund
   * MBMF - Mosque Building and Mendaki Fund
   * SINDA - Singapore Indian Development Association Fund
 
 ```ruby
-calculator = SingaporeCharitableDonations::Calculator.get(type: "CDAC")
-
-cdac_amount = calculator.calculate(date: Date.new(2014, 12, 7), total_wages: 2_000.00)
-
-cdac_amount # Should return 1.00
-
+calculator = SingaporeCharitableDonations::Calculator.get(date: Date.new(2014, 12, 7), type: "CDAC")
+cdac_amount = calculator.calculate(2_000.00)
+cdac_amount #=> 1.00
 ```
 
 ## Contributing

@@ -1,6 +1,7 @@
 module SingaporeCharitableDonations
   module Calculators
 
+    # Collection of calculators for Singapore charitable donations.
     class << self
 
       # @param [Date] date Date of contribution
