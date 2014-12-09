@@ -6,22 +6,21 @@ module SingaporeCharitableDonations
       module Year2009Calculator
         class << self
 
-          # @param [BigDecimal] total_wage
+          # @param [BigDecimal] total_wages
           # @return [BigDecimal] contribution amount
           def calculate(total_wages)
-            rounded_total_wages = total_wages.round
             case
-            when rounded_total_wages <= 200.00
+            when total_wages <= 200.00
               BigDecimal "0.00"
-            when rounded_total_wages <= 1_000.00
+            when total_wages < 1_001.00
               BigDecimal "2.00"
-            when rounded_total_wages <= 2_000.00
+            when total_wages < 2_001.00
               BigDecimal "3.50"
-            when rounded_total_wages <= 3_000.00
+            when total_wages < 3_001.00
               BigDecimal "5.00"
-            when rounded_total_wages <= 4_000.00
+            when total_wages < 4_001.00
               BigDecimal "12.50"
-            else # total_wages > 4_000.00
+            else # total_wages >= 4_001.00
               BigDecimal "16.00"
             end
           end
