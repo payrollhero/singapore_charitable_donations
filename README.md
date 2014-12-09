@@ -33,9 +33,9 @@ Currently supported charitable donation types:
   * SINDA - Singapore Indian Development Association Fund
 
 ```ruby
-calculator = SingaporeCharitableDonations::Calculator.get(date: Date.new(2014, 12, 7), type: "CDAC")
-cdac_amount = calculator.calculate(2_000.00)
-cdac_amount #=> 1.00
+calculator = SingaporeCharitableDonations::Calculators.get date: Date.new(2014, 12, 7),
+                                                           type: "CDAC"
+calculator.calculate(2_000.00) #=> 1.00
 ```
 
 ## Contributing
