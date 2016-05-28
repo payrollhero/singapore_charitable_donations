@@ -20,6 +20,7 @@ module SingaporeCharitableDonations
           ECF::Year2014Calculator,
           ECF::Year2015Calculator,
           MBMF::Year2009Calculator,
+          MBMF::Year2016Calculator,
           SINDA::Year2014Calculator,
           SINDA::Year2015Calculator,
         ]
@@ -35,5 +36,6 @@ require_relative 'calculators/cdac/year_2015_calculator'
 require_relative 'calculators/ecf/year_2014_calculator'
 require_relative 'calculators/ecf/year_2015_calculator'
 require_relative 'calculators/mbmf/year_2009_calculator'
+require_relative 'calculators/mbmf/year_2016_calculator'
 require_relative 'calculators/sinda/year_2014_calculator'
 require_relative 'calculators/sinda/year_2015_calculator'
