@@ -4,6 +4,25 @@ describe SingaporeCharitableDonations::Calculators::MBMF::Year2009Calculator do
 
   subject(:result) { described_class.calculate(total_wages) }
 
+  describe 'applies_to?' do
+    subject(:answer) { described_class.applies_to?(date, "MBMF") }
+
+    context "june 1st, 2016" do
+      let(:date) { Date.new(2016, 6, 1) }
+      it { is_expected.to be false }
+    end
+
+    context "May 22nd, 2016" do
+      let(:date) { Date.new(2016, 5, 22) }
+      it { is_expected.to be true }
+    end
+
+    context "May 22nd, 2008" do
+      let(:date) { Date.new(2008, 5, 22) }
+      it { is_expected.to be false }
+    end
+  end
+
   describe '#calculate' do
 
     context 'when the total wage is less than $200.00' do
