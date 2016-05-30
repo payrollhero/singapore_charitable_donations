@@ -21,34 +21,38 @@ describe SingaporeCharitableDonations::Calculators::MBMF::Year2016Calculator do
   describe '#calculate' do
 
     def it_matches_the_context(example)
-      expect(described_class.calculate(example.metadata[:total_wages])).to eq example.metadata[:expected_contribution]
+      total_wages = example.metadata[:total_wages]
+      total_wages = [total_wages] unless total_wages.kind_of?(Array)
+      total_wages.each do |total_wage|
+        expect(described_class.calculate(total_wage)).to eq example.metadata[:expected_contribution]
+      end
     end
 
-    it 'less than 1000.00', total_wages: 900, expected_contribution: 3.00 do |example|
+    it 'less than 1000.00', total_wages: [900, 1000], expected_contribution: 3.00 do |example|
       it_matches_the_context(example)
     end
 
-    it 'less than 2000.00', total_wages: 1900, expected_contribution: 4.50 do |example|
+    it 'less than 2000.00', total_wages: [1900, 2000], expected_contribution: 4.50 do |example|
       it_matches_the_context(example)
     end
 
-    it 'less than 3000.00', total_wages: 2900, expected_contribution: 6.50 do |example|
+    it 'less than 3000.00', total_wages: [2900, 3000], expected_contribution: 6.50 do |example|
       it_matches_the_context(example)
     end
 
-    it 'less than 4000.00', total_wages: 3900, expected_contribution: 15.00 do |example|
+    it 'less than 4000.00', total_wages: [3900, 4000], expected_contribution: 15.00 do |example|
       it_matches_the_context(example)
     end
 
-    it 'less than 6000.00', total_wages: 5900, expected_contribution: 19.50 do |example|
+    it 'less than 6000.00', total_wages: [5900, 6000], expected_contribution: 19.50 do |example|
       it_matches_the_context(example)
     end
 
-    it 'less than 8000.00', total_wages: 7900, expected_contribution: 22.00 do |example|
+    it 'less than 8000.00', total_wages: [7900, 8000], expected_contribution: 22.00 do |example|
       it_matches_the_context(example)
     end
 
-    it 'less than 1000.00', total_wages: 9900, expected_contribution: 24.00 do |example|
+    it 'less than 1000.00', total_wages: [9900, 10000], expected_contribution: 24.00 do |example|
       it_matches_the_context(example)
     end
 
