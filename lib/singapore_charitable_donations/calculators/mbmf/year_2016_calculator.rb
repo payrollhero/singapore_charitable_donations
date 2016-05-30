@@ -12,17 +12,17 @@ module SingaporeCharitableDonations
             case
             when total_wages <= 1_000.00
               BigDecimal "3.00"
-            when total_wages < 2_000.00
+            when total_wages <= 2_000.00
               BigDecimal "4.50"
-            when total_wages < 3_000.00
+            when total_wages <= 3_000.00
               BigDecimal "6.50"
-            when total_wages < 4_000.00
+            when total_wages <= 4_000.00
               BigDecimal "15.00"
-            when total_wages < 6_000.00
+            when total_wages <= 6_000.00
               BigDecimal "19.50"
-            when total_wages < 8_000.00
+            when total_wages <= 8_000.00
               BigDecimal "22.00"
-            when total_wages < 10_000.00
+            when total_wages <= 10_000.00
               BigDecimal "24.00"
             else # total_wages >= 10_000.00
               BigDecimal "26.00"
